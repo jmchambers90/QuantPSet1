@@ -9,7 +9,7 @@
 #rm(list=ls())
 
 ## Load the MIDS data
-#mids <- read.table("mids.txt")
+mids <- read.table("mids.txt")
 
 ###############################################################################
 ## Section (a) ---- 
@@ -94,5 +94,13 @@ mids2b <- mids[allSelectionIndices, ]
 ## Part 2 ---------------------------------------------------------------------
 ## Use the same logistic regression you fitted in Q2a and compute the same qty
 ## of interest w/ and w/o the correction outlined in Q1 (w/ std errors and 
-## 95% CIs). Compare and discuss
+## 95% CIs). Compare and discuss.
 
+results2bUncorrected <- conflictLogit(mids2b)
+
+## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+## TODO: Which is the correction??? The scalar found in Q1(a) or the alpha 
+## adjustment from Q1(b)? Adjust predicted probabilities accordingly.
+## Will probably still need to bootstrap too, but that will probably use the
+## same procedure as above.
+## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
